@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+
+
+
+/* Parte referente ao carossel de imagens*/
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrossel-imagens {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrossel-imagens::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel-imagens img,
+.carrossel-imagens video {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* setas que controlam o carrossel */
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.seta-esquerda {
+    left: 60px;
+}
+
+.seta-direita {
+    right: 60px;
+}
+
+.seta:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* video dentro do carossel */
+.botao-video {
+    position: absolute;
+    bottom: 90px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.botao-video.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    .seta-esquerda { left: 10px; }
+    .seta-direita { right: 10px; }
+    .seta { width: 36px; height: 36px; }
+}
+
+/* imagens dos carros apos o carossel*/
+.Imagens {
+    position: relative; 
+    width: 100%;
+    height: 800px;
+}
+
+.Imagens img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.Titulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;      
+    justify-content: center;  
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-top: 120px;
+}
+
+
+
+.Titulo h2 {
+    font-size: 60px;    
+    font-weight: 700;     
+    margin: 0;             
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 18px 40px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.mundo {
+    position: relative;
+    width: 100%;
+    height: 680px;
+}
+
+.mundo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.mundo h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* aqui começa a parte inferior do codigo */
+
+
+.rodape {
+    background-color: #242527;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 80px 20px 30px;
+}
+
+.rodape_colunas {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.rodape_coluna h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.rodape_coluna h3:not(:first-child) {
+    margin-top: 55px;
+}
+
+.rodape_coluna ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rodape_coluna li {
+    margin-bottom: 8px;
+}
+
+.rodape_coluna a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.rodape_coluna a:hover {
+    color: #9a9a9a;
+}
+
+
+.rodape_base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1160px;
+    margin: 70px auto 0;
+}
+
+.rodape_legal {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.rodape_legal a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.rodape_legal a:hover {
+    color: #9a9a9a;
+}
+
+.rodape_social {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.rodape_social span {
+    font-size: 13px;
+}
+
+.rodape_social a {
+    color: #6b6c6e;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.rodape_social a:hover {
+    color: white;
+}
+
+
+@media (max-width: 900px) {
+    .rodape-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .mundo {
+        height: 400px;
+    }
+
+    .mundo h2 {
+        font-size: 24px;
+    }
+}

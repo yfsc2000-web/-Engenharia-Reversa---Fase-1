@@ -1,0 +1,375 @@
+.cabecalho {
+    background-color: rgb(37, 39, 40);
+    position: sticky;
+    top: 0;
+    padding: 2.5px;
+    width: 100%; 
+    z-index: 999;
+}
+
+.lista-principal {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-secundaria .dropdown>a {
+    margin-top: 0;
+    height: auto;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.tittle-nav-bar a {
+    text-decoration: none;
+}
+.tittle-nav-bar {
+    padding: 15px;
+}
+#teste-driver-div {
+    white-space: nowrap;
+}
+#aluguel-byd-div {
+    white-space: nowrap;
+}
+.icon-images {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+.dropdown>a {
+    text-align: center;
+    height: 25px;
+    line-height: normal;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px 40px;
+    list-style: none;
+}
+
+.submenu li a {
+
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+
+    background-color: #e0e0e0;
+}
+
+
+.dropdown:hover .submenu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+.opcao1:hover,
+.opcao2:hover {
+    text-decoration: underline;
+}
+
+.dropdown a {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown a:hover {
+    text-decoration: underline;
+}
+
+.icon-BYD img {
+    height: 85px;
+
+}
+
+.icon-images {
+
+    width: 20px;
+    height: 20px;
+
+}
+
+.nav-bar-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+}
+
+.nav-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-secundaria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.list-manipulation-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: start;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 15px;
+    align-items: start;
+}
+
+.list-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "Montserrat";
+}
+
+.list-menu li {
+    margin: 0;
+    padding: 4px 0;
+}
+
+.list-menu li a p {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-manipulation-tecnologia {
+    display: grid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.list-tecnologia ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+.list-tecnologia img {
+    width: 70%;
+}
+
+.list-models div {
+    padding: 40px 30px 0 0;
+    font-family: "Montserrat";
+    color: #252728;
+    font-size: 20px;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.list-models {
+    flex-shrink: 0;
+}
+
+.list-manipulation-model {
+   
+    display: flex;
+}
+
+
+
+
+.car-eletric {
+    white-space: nowrap;
+    text-decoration: underline;
+}
+
+.itens-model-hibrido {
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.list-manipulation-model:has(.car-hibrid:hover, .itens-model-hibrido:hover) .itens-model {
+    display: none;
+}
+
+.list-manipulation-model:has(.car-hibrid:hover, .itens-model-hibrido:hover) .itens-model-hibrido {
+    display: grid;
+}
+
+.list-manipulation-model:has(.car-hibrid:hover, .itens-model-hibrido:hover) .car-eletric {
+    text-decoration: none;
+}
+
+.list-manipulation-model:has(.car-hibrid:hover, .itens-model-hibrido:hover) .car-hibrid {
+    text-decoration: underline;
+}
+
+
+.list-manipulation-model {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    display: flex;
+
+}
+
+.itens-model {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.itens-model-definition {
+    padding: 20px;
+    overflow: hidden;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+}
+
+.itens-model-definition:hover {
+    background: rgba(200, 200, 200, 0.5);
+}
+
+#itens-model-tittle {
+    text-align: center;
+    grid-column: span 2;
+}
+
+#itens-model-img-car {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#itens-model-img-car img {
+    width: 12vw;
+}
+
+#itens-model-img-car:hover img {
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+}
+
+#itens-model-tittle {
+    font-family: "Montserrat";
+    color: #252728;
+    font-size: 16px;
+}
+
+#itens-model-information a {
+    font-family: "Montserrat";
+    color: #252728;
+    margin-top: 15px;
+    display: inline-block;
+    max-width: min-content;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+}
+
+#itens-model-information a:hover {
+    color: #252728;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* o dropdown abre igual ao dos "Modelos", ao passar o mouse no ícone */
+
+.submenu-idioma {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    
+}
+
+.dropdown:hover .submenu-idioma {
+    display: block;
+}
+
+/* esconde os inputs, eles só controlam o estado */
+.tab-radio {
+    display: none;
+}
+
+/* abas */
+.tabs-regiao {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.tabs-regiao label {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: bold;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+
+/* painéis de países: escondidos por padrão */
+.painel-regiao {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 20px;
+}
+
+.painel-regiao a {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #252728;
+    text-decoration: none;
+}
+
+.painel-regiao a:hover {
+    text-decoration: underline;
+}
+
+/* liga o radio marcado à aba e ao painel correspondentes */
+#tab-america:checked~.tabs-regiao label[for="tab-america"],
+#tab-asia:checked~.tabs-regiao label[for="tab-asia"],
+#tab-europa:checked~.tabs-regiao label[for="tab-europa"],
+#tab-mea:checked~.tabs-regiao label[for="tab-mea"] {
+    color: #252728;
+    /* aba ativa fica escura, igual "America" na imagem */
+}
+
+#tab-america:checked~.painel-america {
+    display: grid;
+}
+
+#tab-asia:checked~.painel-asia {
+    display: grid;
+}
+
+#tab-europa:checked~.painel-europa {
+    display: grid;
+}
+
+#tab-mea:checked~.painel-mea {
+    display: grid;
+}
